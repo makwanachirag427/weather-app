@@ -1,0 +1,611 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*utilities*/
+.flex {
+  display: flex;
+}
+
+.align {
+  align-items: center;
+}
+
+.justify {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  background: url("images/bg1.jpg") no-repeat center center/cover;
+}
+
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(255, 255, 255, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 70vw;
+  height: 90vh;
+  border-radius: 1.25rem;
+  background: url("images/bg1.jpg") no-repeat center center/cover;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.left-section {
+  height: 32rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details {
+  border-radius: 1.25rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 25rem;
+  width: 30rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.detail1,
+.detail2 {
+  height: 18rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  height: 8rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#info1 p {
+  margin-left: 0.8rem;
+}
+
+#info2 p {
+  margin-left: 0.8rem;
+}
+
+.col img {
+  width: 4rem;
+}
+
+.sun-set,
+.sun-rise {
+  height: 8rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.sun-time {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sun-time span {
+  font-weight: bolder;
+}
+
+.sun-icon {
+  width: 5rem;
+  margin-bottom: 0.25rem;
+  animation: 3s infinite alternate slidein;
+}
+
+.date-time {
+  height: 6.25rem;
+  width: 30rem;
+  color: white;
+  text-shadow: 0.125rem 0.125rem black;
+  font-size: 2rem;
+  border-radius: 1.25rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.75rem;
+  font-family: "PT Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-time p {
+  margin-inline: 0.313rem;
+}
+
+span {
+  margin-inline: 0.313rem;
+}
+
+.right-section {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1.25rem;
+  height: 32rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-panel {
+  margin-top: 2rem;
+  padding: 0.52rem;
+}
+
+#search {
+  padding: 0.5rem;
+  border-radius: 1.25rem;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.9;
+}
+
+.btn {
+  background: none;
+  border: none;
+}
+
+.search-icon {
+  margin-left: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.error {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+  display: none;
+}
+
+.weather-display {
+  margin-top: 0.5rem;
+  height: 21.25rem;
+  width: 19.313rem;
+  text-shadow: 0.125rem 0.125rem black;
+  font-family: "PT Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.weather-icon {
+  width: 10rem;
+}
+
+.weather-display p:nth-child(2) {
+  font-size: 4rem;
+}
+
+.weather-display p:nth-child(3) {
+  font-size: 2rem;
+}
+
+.country-code {
+  margin-left: 5rem;
+}
+
+/* To make responsive using media queries */
+
+
+
+/* for medium size mobiles */
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+  .container {
+    width: 90vw;
+    height: 95vh;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+  
+  }
+  .left-section{
+    
+    justify-content: center;
+    margin: 0;
+    width:auto;
+  }
+  .right-section{
+  
+    background: none;
+    width:auto;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
+  .details{
+  border-radius: 0;
+  background: none;
+  }
+  .date-time{
+  background: none;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+  }
+  .col{
+  height:11rem;
+  width: 36rem;
+  font-size: 1.7rem;
+  }
+  .sun-rise,.sun-set{
+  font-size: 1.7rem;
+  width: 36rem;
+  height: 11rem;
+  }
+  .weather-icon{
+    width:8rem;
+  }
+  
+  .weather-display p:nth-child(2) {
+  font-size: 5rem;
+  }
+  
+  .weather-display p:nth-child(3) {
+  font-size: 2.5rem;
+  }
+  .weather-display p:nth-child(4) {
+  font-size: 1.2rem;
+  }
+  #search{
+  width:30rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  
+  }
+  .search-icon{
+    height: 3rem;
+    width: 3rem;
+  }
+  .error{
+  font-size: 1.3rem;
+  opacity: 0.95;
+  letter-spacing: 0.1rem;
+  }
+}
+/* for larze size mobiles */
+@media only screen and (min-width: 375px) and (max-width: 425px) {
+  html {
+    font-size: 60%;
+  }
+  .container {
+    width: 90vw;
+    height: 95vh;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+  
+  }
+  .left-section{
+    
+    justify-content: center;
+    margin: 0;
+    width:auto;
+  }
+  .right-section{
+  
+    background: none;
+    width:auto;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
+  .details{
+  border-radius: 0;
+  background: none;
+  }
+  .date-time{
+  background: none;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+  }
+  .col{
+  height:11rem;
+  font-size: 1.7rem;
+  }
+  .sun-rise,.sun-set{
+  font-size: 1.7rem;
+  height: 11rem;
+  }
+  .weather-icon{
+    width:8rem;
+  }
+  
+  .weather-display p:nth-child(2) {
+  font-size: 5rem;
+  }
+  
+  .weather-display p:nth-child(3) {
+  font-size: 2.5rem;
+  }
+  .weather-display p:nth-child(4) {
+  font-size: 1.2rem;
+  }
+  #search{
+  width:30rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  
+  }
+  .search-icon{
+    height: 3rem;
+    width: 3rem;
+  }
+  .error{
+  font-size: 1.3rem;
+  opacity: 0.95;
+  letter-spacing: 0.1rem;
+  }
+
+}
+
+/* For small size mobiles */
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 53%;
+  }
+  .container {
+    width: 90vw;
+    height: 95vh;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    background: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+  
+  }
+  .left-section{
+    
+    justify-content: center;
+    margin-top:-10rem;
+    width:auto;
+    height:36rem;
+  }
+  .right-section{
+  
+    background: none;
+    width:auto;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
+  .details{
+  border-radius: 0;
+  height: 36rem;
+  background: none;
+  }
+  .date-time{
+  background: none;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+  }
+  .col{
+  height:11rem;
+  width:16rem;
+  font-size: 1.7rem;
+  }
+  .sun-rise,.sun-set{
+  font-size: 1.7rem;
+  height: 11rem;
+  width:16rem;
+  }
+  .weather-icon{
+    width:8rem;
+  }
+  
+  .weather-display p:nth-child(2) {
+  font-size: 5rem;
+  }
+  
+  .weather-display p:nth-child(3) {
+  font-size: 2.5rem;
+  }
+  .weather-display p:nth-child(4) {
+  font-size: 1.2rem;
+  }
+  #search{
+  width:27rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  border: 1px solid rgba(248, 237, 237, 0.801);
+  
+  }
+  .search-icon{
+    height: 3rem;
+    width: 3rem;
+  }
+  .error{
+  font-size: 1.3rem;
+  opacity: 0.95;
+  letter-spacing: 0.1rem;
+  }
+}
+
+/* for forlarge tv*/
+@media only screen and (min-width: 2560px) {
+  html {
+    font-size: 190%;
+  }
+
+  .container {
+    justify-content: space-around;
+  }
+}
+/* for tv and desktop */
+@media only screen and (min-width: 1440px) and (max-width: 2560px) {
+  html {
+    font-size: 150%;
+  }
+
+  .container {
+    width: 90vw;
+    height: 80vh;
+    justify-content: space-evenly;
+  }
+}
+/* for larze laptops  */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  html {
+    font-size: 100%;
+  }
+
+  .container {
+    width: 90vw;
+    justify-content: space-evenly;
+  }
+}
+
+
+/* for laptops  */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 90%;
+  }
+  .container{
+    height: 80vh;
+    width: 95vw;
+  }
+
+}
+
+/* for tablets */
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  html {
+    font-size: 62%;
+  }
+
+
+
+.container {
+  width: 90vw;
+  height: 95vh;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+
+}
+.left-section{
+  
+  justify-content: center;
+  margin: 0;
+  width:auto;
+}
+.right-section{
+
+  background: none;
+  width:auto;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+.details{
+border-radius: 0;
+background: none;
+
+}
+.date-time{
+background: none;
+border-top-left-radius: 0%;
+border-top-right-radius: 0%;
+}
+.col{
+height:11rem;
+width: 36rem;
+font-size: 1.7rem;
+}
+.sun-rise,.sun-set{
+font-size: 1.7rem;
+width: 36rem;
+height: 11rem;
+}
+.weather-icon{
+  width:8rem;
+}
+
+.weather-display p:nth-child(2) {
+font-size: 5rem;
+}
+
+.weather-display p:nth-child(3) {
+font-size: 2.5rem;
+}
+.weather-display p:nth-child(4) {
+font-size: 1.2rem;
+}
+#search{
+width:30rem;
+padding: 1rem;
+border-radius: 2rem;
+font-size: 1.5rem;
+
+}
+.search-icon{
+  height: 3rem;
+  width: 3rem;
+}
+.error{
+font-size: 1.3rem;
+opacity: 0.95;
+letter-spacing: 0.1rem;
+}
+  } 
